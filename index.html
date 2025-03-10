@@ -1,49 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> seven wounders</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Wonders</title>
     <link rel="stylesheet" href="color.css">
-    <link rel="icon" href="/icon.gif"> 
+    <link rel="icon" href="/icon.gif">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        nav h1 {
+            margin-left: 20px;
+            color: #ffcc00;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ffcc00; }
+            100% { text-shadow: 0 0 20px #ff9900; }
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 100px 20px 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 1.2s ease-in-out;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        button {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #ff8c00, #ffcc00);
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+        }
+
+        hr {
+            width: 80%;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
 
     <nav>
-        <h1> SEVEN WOUNDERS</h1>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <h1>SEVEN WONDERS</h1>
+        <div>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
     </nav>
 
     <div class="container">
-        <h2> WELCOME </h2>
+        <h2>WELCOME</h2>
         <div id="blog-list"></div>
     </div>
-    <center>
-        <h1>1. Taj Mahal </h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1024px-Taj_Mahal_%28Edited%29.jpeg" alt="taj mahal">
-        <li>
-           <h3>>The Taj Mahal was commissioned by Shah Jahan in 1631
-            To be built in the memory of his wife Mumtaz Mahal
-             who died on 17 June that year while giving birth to their 14th child, Gauhara Begum.
-             Construction started in 1632, and the mausoleum was completed in 1648, while the surrounding buildings and garden were finished five years later.
-             </h3>
-             <a href="https://en.wikipedia.org/wiki/Taj_Mahal"> <button>read more</button></a>
-        </li>
-        <hr>
-        <h1>2.Petra</h1>
-        <li>
-        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSgWGL2BaPXLlm8ru4QHmfZ2bd0Ovet3UbWwSNc3ZQrFz98AxZmnEoR8Jq1ESTVdj360igWnUKlsYFfAllaveMAhaegPBvE_vGUbm6-3w" 
-        alt="Petra">
-        <h3>
-            The Iron Age lasted between 1200 and 600 BC; in that time
-             the Petra area was occupied by the Edomites.
-             The configuration of mountains in Petra allowed for a reservoir of water for the Edomites.
-             This made Petra a stopping ground for merchants, making it an outstanding area for trade. 
-             Things that were traded here included wines, olive oil, and wood.
-        </h3>
-        <a href="https://en.wikipedia.org/wiki/Petra"><button>read more</button></a>
-        </li>
-<hr>
-    </center>
+
+    <section>
+        <h1>1. Taj Mahal</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1024px-Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal">
+        <p>
+            The Taj Mahal was commissioned by Shah Jahan in 1631 in memory of his wife Mumtaz Mahal,
+            who died on 17 June that year while giving birth to their 14th child, Gauhara Begum.
+            Construction started in 1632, and the mausoleum was completed in 1648.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Taj_Mahal"><button>Read More</button></a>
+    </section>
+
+    <hr>
+
+    <section>
+        <h1>2. Petra</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSgWGL2BaPXLlm8ru4QHmfZ2bd0Ovet3UbWwSNc3ZQrFz98AxZmnEoR8Jq1ESTVdj360igWnUKlsYFfAllaveMAhaegPBvE_vGUbm6-3w" alt="Petra">
+        <p>
+            The Iron Age lasted between 1200 and 600 BC; during that time, the Petra area was occupied by the Edomites.
+            The mountains of Petra provided a natural reservoir for water, making it a key trading hub for merchants dealing in wines, olive oil, and wood.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Petra"><button>Read More</button></a>
+    </section>
 
 </body>
 </html>
